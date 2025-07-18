@@ -1,52 +1,157 @@
-# MERN Stack Capstone Project
+# 🎉 Event Management System (MERN + Next.js)
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+A full-stack **Event Management System** built using **Next.js**, **Node.js**, **Express**, and **MongoDB**. This platform enables users to view, manage, and organize events with a responsive interface and API-powered backend.
 
-## Assignment Overview
+## 🌍 Live Demo
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+**Frontend:** [Live Site](https://your-frontend.onrender.com)  
+**Backend API:** [Render Backend](https://week-8-capstone-architectphilemon-1.onrender.com)
 
-## Getting Started
+> ⚠️ Make sure both frontend and backend are deployed and running to use the application properly.
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+---
 
-## Files Included
+## ⚙️ Tech Stack
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+**Frontend**
+- Next.js (React Framework)
+- Tailwind CSS
+- Axios (API calls)
 
-## Requirements
+**Backend**
+- Node.js
+- Express.js
+- MongoDB with Mongoose
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+**Hosting**
+- Render (both frontend and backend)
 
-## Project Ideas
+---
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+## 📁 Folder Structure
 
-## Submission
+project-root/
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── config/
+│ └── server.js
+├── frontend/ (Next.js app)
+│ ├── pages/
+│ ├── components/
+│ ├── public/
+│ ├── styles/
+│ └── next.config.js
+└── README.md
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+yaml
+Copy
+Edit
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+---
 
-## Resources
+## 🚀 Features
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+- 🗓️ View all upcoming events
+- ➕ Create a new event
+- 🔍 View detailed event info
+- 🌐 API-connected frontend (via Axios)
+- 🧑‍💼 Organized and responsive UI (Tailwind)
+- ⚡ Fast performance using Next.js SSR/SSG
+
+---
+
+## 🔧 Installation
+
+### Prerequisites
+- Node.js
+- MongoDB Atlas or local MongoDB
+- Git
+
+---
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/week-8-capstone_-architectPhilemon.git
+cd week-8-capstone_-architectPhilemon
+2. Setup Backend
+bash
+Copy
+Edit
+cd backend
+npm install
+touch .env
+.env file:
+
+ini
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+Start the backend:
+
+bash
+Copy
+Edit
+npm run dev
+3. Setup Frontend (Next.js)
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+touch .env.local
+.env.local file:
+
+ini
+Copy
+Edit
+NEXT_PUBLIC_API_URL=https://week-8-capstone-architectphilemon-1.onrender.com
+Run the frontend in dev mode:
+
+bash
+Copy
+Edit
+npm run dev
+Build for production:
+
+bash
+Copy
+Edit
+npm run build
+npm start
+🚀 Deployment (Render)
+Backend:
+Push backend/ folder to GitHub.
+
+Create a Render Web Service.
+
+Set:
+
+Build Command: npm install
+
+Start Command: npm start
+
+Add your environment variables (e.g., MONGO_URI, PORT)
+
+Frontend (Next.js on Render):
+Push frontend/ folder to GitHub.
+
+Create another Render Web Service.
+
+Set:
+
+Build Command: npm install && npm run build
+
+Start Command: npm start
+
+Environment: NEXT_PUBLIC_API_URL
+
+👨‍💻 Author
+Philemon Mwendwa
+GitHub: @architectPhilemon
+
+📄 License
+Licensed under the MIT License.
