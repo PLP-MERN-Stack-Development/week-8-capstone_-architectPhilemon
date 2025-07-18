@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 // Define the base URL for your backend API
-const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL || "http://localhost:5000"
+const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL || "https://week-8-capstone-architectphilemon.onrender.com"
 
 export function AdminUserManagement() {
   const [username, setUsername] = useState("")
