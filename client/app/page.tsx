@@ -19,7 +19,8 @@ export default async function HomePage() {
   let error: string | null = null
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/events`);
+    const res = await fetch('https://week-8-capstone-architectphilemon.onrender.com/api/events')  // ✅ Or via `process.env`
+
 
 
     if (!res.ok) {
