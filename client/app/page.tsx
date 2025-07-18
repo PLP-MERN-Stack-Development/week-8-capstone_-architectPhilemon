@@ -19,7 +19,8 @@ export default async function HomePage() {
   let error: string | null = null
 
   try {
-    const res = await fetch(`${BACKEND_API_BASE_URL}/api/events`, { cache: "no-store" })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/events`);
+
 
     if (!res.ok) {
       // Attempt to parse error message from response body if available
