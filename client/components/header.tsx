@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 
 export function Header() {
   const router = useRouter()
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null)
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken")
@@ -41,11 +41,11 @@ export function Header() {
         <Link href="/support" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
           Support
         </Link>
-        {/* Temporarily add admin registration link for setup */}
         <Link href="/register-admin" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
           Register Admin
         </Link>
-        {isLoggedIn ? (
+
+        {isLoggedIn === null ? null : isLoggedIn ? (
           <Button onClick={handleLogout} variant="ghost" className="text-gray-700 hover:text-gray-900">
             Logout
           </Button>
@@ -57,7 +57,7 @@ export function Header() {
           </Link>
         )}
       </nav>
-      <Button className="md:hidden">Menu</Button> {/* Placeholder for mobile menu */}
+      <Button className="md:hidden">Menu</Button>
     </header>
   )
 }
