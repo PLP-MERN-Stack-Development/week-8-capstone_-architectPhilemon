@@ -2,8 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Header } from "@/components/header" // New import
-import { Footer } from "@/components/footer" // New import
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,18 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div
-          className="relative min-h-screen bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1600&q=80')" }}
-        >
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-black opacity-60"></div>
-          <div className="relative z-10 flex flex-col min-h-screen">
-            <Header /> {/* New Header component */}
-            <main className="flex-grow">{children}</main>
-            <Footer /> {/* New Footer component */}
-          </div>
+      <body
+        className={`${inter.className} relative min-h-screen bg-cover bg-center bg-fixed`}
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0" />
+
+        {/* Actual content */}
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
