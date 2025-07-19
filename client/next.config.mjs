@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -30,8 +31,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // ✅ Add this
-  assetPrefix: './',
+  // ✅ Valid assetPrefix for next/font
+  assetPrefix: '/',
 };
 
 export default nextConfig;
