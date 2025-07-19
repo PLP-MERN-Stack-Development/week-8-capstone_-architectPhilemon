@@ -1,7 +1,7 @@
 import { EventCard } from "@/components/event-card"
 
 // Define the base URL for your backend API
-const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BASE_API_URL || "https://week-8-capstone-architectphilemon.onrender.com"
+const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BASE_API_URL ?? "https://week-8-capstone-architectphilemon.onrender.com"
 
 interface Event {
   _id: string // MongoDB uses _id
@@ -20,10 +20,6 @@ export default async function HomePage() {
 
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/events`)
-
-
-
-
     if (!res.ok) {
       // Attempt to parse error message from response body if available
       const errorData = await res.json().catch(() => ({ message: res.statusText }))
