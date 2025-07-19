@@ -4,7 +4,7 @@ A full-stack **Event Management System** built using **Next.js**, **Node.js**, *
 
 ## 🌍 Live Demo
 
-**Frontend:** [Live Site](https://week-8-capstone-architectphilemon-1.onrender.com)  
+**Frontend:** [Live Site](https://week-8-capstone-architectphilemon-1-td6k.onrender.com/)  
 **Backend API:** [Render Backend](https://week-8-capstone-architectphilemon.onrender.com)
 
 > ⚠️ Make sure both frontend and backend are deployed and running to use the application properly.
