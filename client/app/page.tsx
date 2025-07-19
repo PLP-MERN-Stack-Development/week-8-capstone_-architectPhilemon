@@ -19,7 +19,7 @@ export default async function HomePage() {
   let error: string | null = null
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/events`)
+    const res = await fetch(`https://week-8-capstone-architectphilemon.onrender.com/api/events`)
     if (!res.ok) {
       // Attempt to parse error message from response body if available
       const errorData = await res.json().catch(() => ({ message: res.statusText }))
