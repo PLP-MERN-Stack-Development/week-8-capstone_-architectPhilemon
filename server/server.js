@@ -158,6 +158,24 @@ app.post("/api/events", authenticateToken, async (req, res) => {
     res.status(500).json({ message: "Failed to create event, please try again later." })
   }
 })
+// DELETE an event (PROTECTED - requires admin or superAdmin)
+app.delete("/api/events/:id", authenticateToken, async (req, res) => {
+  if (!req.user || (req.user.role !== "admin" && req.user.role !== "superAdmin")) {
+    return res.status(403).json({ message: "Forbidden: Only administrators can delete events." })
+  }
+
+  try {
+    const deletedEvent = await Event.findByIdAndDelete(req.params.id)
+    if (!deletedEvent) {
+      return res.status(404).json({ message: "Event not found" })
+    }
+    res.status(200).json({ message: "Event deleted successfully" })
+  } catch (err) {
+    console.error("Error deleting event:", err)
+    res.status(500).json({ message: "Server error while deleting event" })
+  }
+})
+
 
 // Admin: Create a new user (PROTECTED - only by superAdmin)
 app.post("/api/admin/users", authenticateToken, authorizeSuperAdmin, async (req, res) => {
