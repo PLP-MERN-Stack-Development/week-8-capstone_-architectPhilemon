@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
 // Define the base URL for your backend API
-const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL || "http://localhost:5000"
+const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL || "https://week-8-capstone-architectphilemon.onrender.com"
 
 export default function LoginPage() {
   const [username, setUsername] = useState("")
