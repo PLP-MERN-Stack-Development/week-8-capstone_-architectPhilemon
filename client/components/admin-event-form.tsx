@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Textarea } from "@/components/ui/textarea"
 
 // Define the base URL for your backend API
-const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BASE_API_URL ?? "https://week-8-capstone-architectphilemon.onrender.com/"
+const BACKEND_API_BASE_URL = process.env.NEXT_PUBLIC_BASE_API_URL ?? "https://week-8-capstone-architectphilemon.onrender.com"
 
 export function AdminEventForm() {
   const [name, setName] = useState("")
