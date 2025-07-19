@@ -10,25 +10,28 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com', // Example for remote images if you use them
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'source.unsplash.com', // Example for remote images if you use them
+        hostname: 'source.unsplash.com',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'via.placeholder.com', // Example for remote images if you use them
+        hostname: 'via.placeholder.com',
         port: '',
         pathname: '/**',
       },
     ],
     unoptimized: true,
   },
+
+  // ✅ Add this
+  assetPrefix: './',
 };
 
 export default nextConfig;
