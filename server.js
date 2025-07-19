@@ -20,7 +20,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret_key"
 const resend = new Resend(RESEND_API_KEY)
 
 const corsOptions = {
-  origin: ["http://localhost:3000", " https://week-8-capstone-architectphilemon-1-td6k.onrender.com"],
+  origin: ["http://localhost:3000", "https://week-8-capstone-architectphilemon-1-td6k.onrender.com"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
